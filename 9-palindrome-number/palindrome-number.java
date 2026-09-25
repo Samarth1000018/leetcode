@@ -3,15 +3,14 @@ class Solution {
         if(x<0){
             return false;
         }
-
         int reverse = 0;
-        int xcopy = x;
+        int num = x;
 
-        while(x>0){
-            reverse = (reverse * 10) + (x%10);
-            x/=10;
+        while(num != 0){
+            reverse = reverse * 10 + num %10;
+            num = num / 10;
         }
-        return reverse == xcopy;
+        return(reverse == x);
     }
 }
 
